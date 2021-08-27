@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components'
 
-const sanitize = css`
+const sanitizeCss = css`
   /* Document
    * ========================================================================== */
 
@@ -370,7 +370,7 @@ const sanitize = css`
   }
 `
 
-const typography = css`
+const sanitizeTypography = css`
   /**
    * Use the default user interface font in all browsers (opinionated).
    */
@@ -406,7 +406,7 @@ const typography = css`
   }
 `
 
-const forms = css`
+const sanitizeForms = css`
   /**
    * 1. Change the inconsistent appearance in all browsers (opinionated).
    * 2. Add typography inheritance in all browsers (opinionated).
@@ -452,13 +452,21 @@ const forms = css`
 `
 
 const GlobalStyles = createGlobalStyle`
-  ${sanitize};
-  ${forms};
-  ${typography};
+  ${sanitizeCss};
+  ${sanitizeForms};
+  ${sanitizeTypography};
 
   @font-face {
     font-family: 'Milans';
     src: url("../assets/fonts/Milans.woff");
+  }
+  html,
+  body,
+  main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
   }
 `
 
