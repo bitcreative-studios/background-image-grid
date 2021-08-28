@@ -785,6 +785,7 @@ type SitePluginPluginOptions {
   cache_busting_mode: String
   crossOrigin: String
   include_favicon: Boolean
+  cacheDigest: String
   pathCheck: Boolean
   allExtensions: Boolean
   isTSX: Boolean
@@ -1881,6 +1882,7 @@ input SitePluginPluginOptionsFilterInput {
   cache_busting_mode: StringQueryOperatorInput
   crossOrigin: StringQueryOperatorInput
   include_favicon: BooleanQueryOperatorInput
+  cacheDigest: StringQueryOperatorInput
   pathCheck: BooleanQueryOperatorInput
   allExtensions: BooleanQueryOperatorInput
   isTSX: BooleanQueryOperatorInput
@@ -2102,6 +2104,7 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___cache_busting_mode
   pluginCreator___pluginOptions___crossOrigin
   pluginCreator___pluginOptions___include_favicon
+  pluginCreator___pluginOptions___cacheDigest
   pluginCreator___pluginOptions___pathCheck
   pluginCreator___pluginOptions___allExtensions
   pluginCreator___pluginOptions___isTSX
@@ -2442,6 +2445,7 @@ enum SitePluginFieldsEnum {
   pluginOptions___cache_busting_mode
   pluginOptions___crossOrigin
   pluginOptions___include_favicon
+  pluginOptions___cacheDigest
   pluginOptions___pathCheck
   pluginOptions___allExtensions
   pluginOptions___isTSX
